@@ -11,14 +11,14 @@ that depends on another external protobuf file that lives in another [git reposi
 #### 2. Set build.sbt
 -   If you need to reference a sbt sub-project from the github repository:
     ```scala
-    lazy val subProject = ProjectRef(
+    lazy val sbtProjectFromOtherGitRepo = ProjectRef(
       build = uri("ssh://git@github.com/<user>/<repo>.git#<branch|commit|tag>"),
       project= "sub-project"
     )
     ```
 -   Else just specify github repository:
     ```scala
-    lazy val protoTracking = RootProject(
+    lazy val projectFromOtherGitRepo = RootProject(
       build = uri("ssh://git@github.com/<user>/<repo>.git#<branch|commit|tag>")
     )
     ```
