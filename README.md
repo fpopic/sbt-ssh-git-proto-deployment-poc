@@ -27,7 +27,7 @@ Dependency projects will be cloned/checkouted to:  `~/.sbt/<sbt version>/staging
 -   Then using `sbt-protoc` specify location of .proto files from project dependency
 ```scala
 PB.protoSources in Compile ++= Seq(
-      baseDirectory.in(githubRepoHostingProtobuf).value / "my-protobuf-files"
+      baseDirectory.in(projectFromOtherGitRepo).value / "path/to/folder/where/protos/are"
 )
 ```
     
