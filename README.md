@@ -33,6 +33,7 @@ Dependency projects will be cloned/checkouted to:  `~/.sbt/<sbt version>/staging
     
 
 #### 3. Run:
-1. ```git clone```
+1. ```git clone git@github.com:fpopic/sbt-ssh-git-proto-deployment-poc.git```
+2. ```cd sbt-ssh-git-proto-deployment-poc```
 2. ```sbt```
 3. ```compile```
