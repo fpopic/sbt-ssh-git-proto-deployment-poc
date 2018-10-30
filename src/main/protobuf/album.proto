@@ -1,0 +1,9 @@
+syntax = "proto2";
+package com.github.fpopic;
+
+import "song.proto";
+
+message Album {
+    optional int32 id = 1;
+    repeated com.github.fpopic.Song songs = 2;
+}
