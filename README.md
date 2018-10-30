@@ -1,12 +1,12 @@
 ### sbt-ssh-git-proto-PoC
 
 This is a Proof of Concept project that demonstrates how to compile protobuf file
-that depends on another external protobuf file that lives in another git repository.
+that depends on another external protobuf file that lives in another [git repository](https://github.com/fpopic/github-repo-hosting-protobuf).
 
 Requirements:
 1.  [sbt](https://www.scala-sbt.org/download.html) 
 2.  [sbt-protoc plugin](project/protoc.sbt)
-3.  ssh key (in `~/.ssh/`) to access private git repository
+3.  SSH key (in `~/.ssh/`) to access private git repository
 
 sbt & git:
 1. If you need to reference a sbt sub-project from the github repository:
