@@ -24,10 +24,10 @@ that depends on another external protobuf file that lives in another [git reposi
     ```
 Dependency projects will be cloned/checkouted to:  `~/.sbt/<sbt version>/staging/<sha>/<repo>/`
 
--   Then using `sbt-protoc` specify location of .proto files from project dependency
+-   Then using `sbt-protoc` specify location of .proto files from project dependency:
     ```scala
     PB.protoSources in Compile ++= Seq(
-          baseDirectory.in(projectFromOtherGitRepo).value / "path/to/folder/where/protos/are"
+      baseDirectory.in(projectFromOtherGitRepo).value / "path/to/folder/where/protos/are"
     )
     ```
     
