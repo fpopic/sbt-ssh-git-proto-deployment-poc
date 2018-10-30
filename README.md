@@ -13,7 +13,7 @@ that depends on another external protobuf file that lives in another [git reposi
     ```scala
     lazy val sbtProjectFromOtherGitRepo = ProjectRef(
       build = uri("ssh://git@github.com/<user>/<repo>.git#<branch|commit|tag>"),
-      project= "sub-project"
+      project = "sub-project"
     )
     ```
 -   Else just specify github repository:
