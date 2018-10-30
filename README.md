@@ -1,6 +1,6 @@
 ### sbt-ssh-git-proto-PoC
 
-This is a Prof of Concept project that demonstrates how to compile protobuf file
+This is a Proof of Concept project that demonstrates how to compile protobuf file
 that depends on another external protobuf file that lives in another git repository.
 
 Requirements:
