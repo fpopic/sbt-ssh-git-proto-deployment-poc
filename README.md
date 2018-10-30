@@ -1,4 +1,4 @@
-### sbt-ssh-git-proto-PoC
+### sbt-ssh-git-proto-deployment-PoC
 
 This is a Proof of Concept project that demonstrates how to compile protobuf file
 that depends on another external protobuf file that lives in another [git repository](https://github.com/fpopic/github-repo-hosting-protobuf).
