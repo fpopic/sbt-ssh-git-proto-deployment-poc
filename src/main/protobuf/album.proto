@@ -1,9 +1,15 @@
 syntax = "proto2";
+
 package com.github.fpopic;
 
-import "song.proto";
+option java_multiple_files = true;
+option java_outer_classname = "AlbumProto";
+option java_package = "com.github.fpopic";
+
+import "bar/song.proto"; // this specifies where to look for those fully specified classes
+import "foo/song.proto";
 
 message Album {
-    optional int32 id = 1;
-    repeated com.github.fpopic.Song songs = 2;
+    repeated com.github.fpopic.bar.Song songs1 = 1; // here i specify fuclasses
+    repeated com.github.fpopic.foo.Song songs2 = 2;
 }

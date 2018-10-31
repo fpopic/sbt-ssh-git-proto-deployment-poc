@@ -17,7 +17,7 @@ lazy val root = (project in file("."))
     // INPUT
     PB.protoSources in Compile ++= Seq(
       // Specify location of .proto files from project dependency
-      baseDirectory.in(anotherProject).value / "my-protobuf-files", // the first proto (one with the newest version) will override later protos
+      baseDirectory.in(anotherProject).value / "my-protobuf-files",
       baseDirectory.in(githubRepoHostingProtobuf).value / "my-protobuf-files",
       // To be able to pickup .proto files from .jar dependency
       // e.g. libraryDependencies += "organization" %% "name" % "version" % "protobuf"
