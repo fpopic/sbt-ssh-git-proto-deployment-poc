@@ -31,9 +31,24 @@ Dependency projects will be cloned/checkouted to:  `~/.sbt/<sbt version>/staging
     )
     ```
     
-
 #### 3. Run:
 1. ```git clone git@github.com:fpopic/sbt-ssh-git-proto-deployment-poc.git```
 2. ```cd sbt-ssh-git-proto-deployment-poc```
 2. ```sbt```
 3. ```compile```
+
+
+#### 4. Notes:
+- Dependency projects are not getting updated using `update` command after they have been changed in git, 
+that's reason why is better to hardcode commit/tag version of your git repository dependency.
+    - Workaround is to delete sbt staging folder before update so the project will always clone from git
+        ```bash
+        rm -r ~/.sbt/<sbt version>/staging/
+        sbt update 
+        ```
+        - You can maybe create a sbt Task and call it cleanStagingAndUpdate
+            - https://groups.google.com/forum/#!topic/simple-build-tool/YJnUNSjrU6Q
+    - Or use sbt for downloading git repos and then ```publishLocal```  to get .jar and add jar to ```libraryDependencies``` instead of dependsOn(project)
+        - https://github.com/sbt/sbt/issues/1284
+        - https://stackoverflow.com/questions/22432666/how-can-sbt-project-import-library-from-github-cloned-to-local-directory
+    - This PoC is made for CI automatization (Jenkins) for deploying proto files to maven repository (every time cloning from scratch)
