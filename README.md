@@ -4,8 +4,8 @@ This is a Proof of Concept project that demonstrates how to compile protobuf fil
 that depends on another external protobuf file that lives in another [git repository](https://github.com/fpopic/github-repo-hosting-protobuf).
 
 #### 1. Requirements:
-1.  [sbt](https://www.scala-sbt.org/download.html) 
-2.  [sbt-protoc plugin](project/protoc.sbt)
+1.  [sbt](https://www.scala-sbt.org/download.html)
+2.  [sbt-protoc plugin](project/protoc.sbt) to compile .proto files to .java .scala classes
 3.  SSH key (in `~/.ssh/`) to access private git repository
 
 #### 2. Set build.sbt
