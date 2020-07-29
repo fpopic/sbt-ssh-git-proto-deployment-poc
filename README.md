@@ -47,7 +47,7 @@ that's reason why is better to hardcode commit/tag version of your git repositor
     sbt update 
     ```
     You can maybe create a sbt external task and name it [cleanStagingAndUpdate](https://groups.google.com/forum/#!topic/simple-build-tool/YJnUNSjrU6Q)
-- Or use sbt for downloading git repos and then ```publishLocal```  to get .jar and add jar to ```libraryDependencies``` instead of dependsOn(project)
+- Or use sbt for downloading git repos and then ```publishLocal```  to get .jar and add jar to ```libraryDependencies``` instead of `dependsOn(project)`
     - https://github.com/sbt/sbt/issues/1284
     - https://stackoverflow.com/questions/22432666/how-can-sbt-project-import-library-from-github-cloned-to-local-directory
 
