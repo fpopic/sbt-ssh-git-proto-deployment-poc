@@ -40,13 +40,15 @@ Dependency projects will be cloned/checkouted to:  `~/.sbt/<sbt version>/staging
 
 #### 4. Notes:
 External projects that we depend on (`RootProject`) are not getting updated using `sbt update` command after they have been changed in git, 
-that's reason why it's always better to hardcode commit/tag version of the dependency than just use the repository name.
+(that's reason why it's always better to hardcode commit/tag version of the dependency than just use the repository name), so if a dependend project changes sbt won't reupdate the source code of the dependency
+
 - Workaround is to delete sbt staging folder before update so the project will always clone from git
     ```bash
     rm -r ~/.sbt/<sbt version>/staging/
     sbt update 
     ```
     You can maybe create a sbt external task and name it [cleanStagingAndUpdate](https://groups.google.com/forum/#!topic/simple-build-tool/YJnUNSjrU6Q)
+
 - Or use sbt for downloading git repos and then ```publishLocal```  to get .jar and add jar to ```libraryDependencies``` instead of `dependsOn(project)`
     - https://github.com/sbt/sbt/issues/1284
     - https://stackoverflow.com/questions/22432666/how-can-sbt-project-import-library-from-github-cloned-to-local-directory
