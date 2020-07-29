@@ -39,8 +39,8 @@ Dependency projects will be cloned/checkouted to:  `~/.sbt/<sbt version>/staging
 
 
 #### 4. Notes:
-Dependency projects are not getting updated using `update` command after they have been changed in git, 
-that's reason why is better to hardcode commit/tag version of your git repository dependency.
+External projects that we depend on (`RootProject`) are not getting updated using `sbt update` command after they have been changed in git, 
+that's reason why it's always better to hardcode commit/tag version of the dependency than just use the repository name.
 - Workaround is to delete sbt staging folder before update so the project will always clone from git
     ```bash
     rm -r ~/.sbt/<sbt version>/staging/
